@@ -11,7 +11,7 @@ function Stockmarket() {
       <section className="select">
         {/* 
     In the future, I will add a router to navigate 
-    through different time ranges. and i will pass them the data 
+    through different time ranges. and i will pass them the data sdsd
   */}
         <div className="active">1W</div>
         <div className="active">1M</div>
@@ -22,7 +22,7 @@ function Stockmarket() {
       <div className="stock-container">
         <div className="stock-info">
           <Avatar
-            sx={{ width: 35, height: 35 }}
+            sx={{ width: 35, height: 40 }}
             src={
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDuVZpxZ5lNj6biikhVQODoer-deJJ11ItHiXyNLc-wSaJA7TXcDzmu1yah9aIv6brex8&usqp=CAU"
             }
@@ -34,7 +34,7 @@ function Stockmarket() {
           {/* 
       Here, I need to pass the data of the one-week high and low.
       i  can replace the sample data [1, 4, 2, 5, 7, 2, 4, 6] 
-      with the actual data for one-week high and low.
+      with the actual data for one-week sdsd high and low.
     */}
           <Sparklines data={[5, 10, 5, 20, 8, 15]} limit={30}>
             <SparklinesLine
@@ -49,7 +49,7 @@ function Stockmarket() {
         </div>
         <div className="stock-info">
           <Avatar
-            sx={{ width: 35, height: 35 }}
+            sx={{ width: 35, height: 40 }}
             src={
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDuVZpxZ5lNj6biikhVQODoer-deJJ11ItHiXyNLc-wSaJA7TXcDzmu1yah9aIv6brex8&usqp=CAU"
             }
