@@ -7,7 +7,9 @@ import { Sparklines, SparklinesLine } from "react-sparklines";
 function Stockmarket({ getData }) {
   const urlObj = {
     AAPL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDuVZpxZ5lNj6biikhVQODoer-deJJ11ItHiXyNLc-wSaJA7TXcDzmu1yah9aIv6brex8&usqp=CAU",
-    NVDA: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFile%3ATesla_logo.png&psig=AOvVaw1O1OnTsyR5T_kw3KhmOTHh&ust=1709742596271000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDrh9LF3YQDFQAAAAAdAAAAABAE",
+    AMZN: "https://logowik.com/content/uploads/images/amazon6707.jpg",
+    GOOG: "https://st2.depositphotos.com/1001860/11212/i/450/depositphotos_112122944-stock-photo-google-applications-logo.jpg",
+    MSFT: "https://pngimg.com/uploads/microsoft/microsoft_PNG14.png",
   };
 
   return (
@@ -17,7 +19,7 @@ function Stockmarket({ getData }) {
     In the future, I will add a router to navigate 
     through different time ranges. and i will pass them the data 
   */}
-        <div className="active">1W</div>
+        <div className="active">1D</div>
         <div className="active">1M</div>
         <div className="active">5M</div>
         <div className="active">1Y</div>
@@ -37,11 +39,18 @@ function Stockmarket({ getData }) {
           with the actual data for one-week high and low.
         */}
             <Sparklines
-              data={[stock.close, stock.open, stock.high, stock.afterHours]}
+              data={[stock.close, stock.open, stock.high, stock.close]}
               limit={15}
             >
               <SparklinesLine
-                style={{ strokeWidth: 4, stroke: "green", fill: "none" }}
+                style={{
+                  strokeWidth: 4,
+                  stroke:
+                    ((stock.close - stock.open) / stock.open) * 100 < 0
+                      ? "red"
+                      : "green",
+                  fill: "none",
+                }}
               />
             </Sparklines>
 

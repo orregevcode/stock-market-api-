@@ -1,11 +1,10 @@
-import { symbol } from "d3-shape";
 import "./App.css";
 import Iphone from "./component/Iphone/Iphone";
 import { useState, useEffect } from "react";
 
 function App() {
   const [getData, setData] = useState([]);
-  const symbols = ["AAPL", "NVDA", "TSLA", "MSFT", "GOOGL"];
+  const symbols = ["AAPL", "AMZN", "GOOG", "MSFT"];
 
   const today = new Date();
   today.setDate(today.getDate() - 1); // Subtract 2 days
@@ -39,7 +38,7 @@ function App() {
 
   useEffect(() => {
     fetchData();
-  }, []); // Runs once on component mount
+  }, []);
 
   return (
     <div className="App">
