@@ -1,0 +1,65 @@
+.select{
+    position: absolute;
+    display: flex;
+    width: 70%;
+   margin-top: 3rem;
+  justify-content: center;
+  height: 2rem;
+  gap: 1rem;
+ background-color:#21242d ;
+ border-radius: 20px;
+ align-items: center;
+ padding: 1.5rem;
+ color:rgb(23,177,105) ;
+
+ cursor: pointer;
+
+
+ .active:active{
+    cursor: pointer;
+    background-color:#17b1699a ;
+    border-radius: 8px;
+ }
+}
+
+.stock-container{
+    position: absolute;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    margin-top: 6.5rem;
+    flex-direction: column;
+    
+   
+
+   
+
+.stock-info{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    gap: 1rem;
+     .preview__name{
+        display: flex;
+        flex-direction: column;
+    span{
+        color: #fff;
+    }
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    span{
+        color: #fff;
+    }
+    .price-percentage{
+    color: green
+    }
+}
+  
+}
+
+}
