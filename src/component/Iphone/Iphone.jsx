@@ -2,7 +2,8 @@ import React from "react";
 import "./Iphone.scss";
 import Stockmarket from "./Stockmarket";
 import { FaBatteryThreeQuarters } from "react-icons/fa";
-function Iphone() {
+function Iphone({ getData }) {
+  console.log(getData);
   return (
     <div className="warrper">
       <div className="outside-border">
@@ -30,7 +31,7 @@ function Iphone() {
             </div>
           </div>
 
-          <Stockmarket />
+          <Stockmarket getData={getData} />
         </div>
       </div>
     </div>
